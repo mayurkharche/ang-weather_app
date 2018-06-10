@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flatty Weather Report Responsive Widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://www.google.com">
+<meta name="keywords" content="Flatty Weather Report template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />  -->
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<!-- //web font -->
+<!-- js -->   
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/skycons.js"></script> <!-- skycons-icons --> 	
+<!-- //js -->  
+</head>
+<body>
+	<!-- w3ls-weather -->
+	<div class="w3ls-weather">
+		<h1>Weather Report</h1>
+		<div class="w3ls-weather-agileinfo"> 
+			<div class="weather-left">
+				<div class="weather-left-text">
+					<h4>{{response.name}}, {{response.sys.country}} </h4>
+					<h5>{{today}}, {{todayDate}}th {{todayMonth}} </h5>
+				</div>
+				<ul class="report">
+					<li><a>{{response.main.temp}} °C</a></li>
+					<li><a><span>{{tempF}}</span> °F</a></li>
+				</ul>
+			</div>
+			<div class="weather-right">
+				<ul>
+					<li>
+						
+						<h4>Humidity</h4>
+						<h5>{{response.main.humidity}}%</h5>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<h4>Pressure</h4>
+						<h5>{{response.main.pressure}} mb</h5>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<h4>Wind</h4>
+						<h5>{{response.wind.speed}} mph</h5>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<h4>Max Temp</h4>
+						<h5>{{response.main.temp_max}} °C</h5>
+						<div class="clear"></div>
+					</li>
+				</ul>
+				<script>
+					 var icons = new Skycons({"color": "#fff"}),
+						  list  = [
+							"partly-cloudy-day"
+						  ],
+						  i;
+
+					  for(i = list.length; i--; )
+						icons.set(list[i], list[i]);
+					  icons.play();
+				</script>
+				<script>
+					 var icons = new Skycons({"color": "#fff"}),
+						  list  = [
+							"clear-night","partly-cloudy-night", "cloudy", "clear-day", "sleet", "snow", "wind","fog"
+						  ],
+						  i;
+
+					  for(i = list.length; i--; )
+						icons.set(list[i], list[i]);
+					  icons.play();
+				</script>
+			</div>
+			<div class="clear"></div>
+		</div>  
+	</div>
+</body>
+</html>
